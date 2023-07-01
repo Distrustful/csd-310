@@ -7,7 +7,9 @@ db = client.pytech
 docs = db.students.find({})
 print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
 for doc in docs:
-    print(doc)
+    print("Student ID: " + str(doc["student_id"]))
+    print("First Name: " + str(doc["first_name"]))
+    print("Last Name: " + str(doc["last_name"]) + "\n")
 
 doc = db.students.find_one({"student_id": "1007"})
 
