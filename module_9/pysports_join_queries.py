@@ -43,6 +43,6 @@ finally:
         print("Last Name: {}".format(player[2]))
         print("Team ID: {}".format(player[3]) + "\n")
 
-    input("\n\n Press any key to continue...")
+    input("\nPress any key to continue...")
 
     db.close()
