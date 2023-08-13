@@ -190,11 +190,11 @@ def check_book_add(cursor, userid, addablebooks):
         bookid = input("Please enter Book_ID to add: ")
         bookid = int(bookid)
     except ValueError:
-        print("Invalid input. Please enter a valid numeric Book_ID.")
+        print("Invalid input. Please enter a valid numeric Book_ID.\n")
 
     bookfound = False
 
-    #Run through list of available books if not available regect addition
+    #Run through list of available books if not available regect addition and print error
     for book in addablebooks:
         if bookid == book[0]:
             bookfound = True
@@ -205,6 +205,7 @@ def check_book_add(cursor, userid, addablebooks):
         add_books_to_wishlist(cursor, userid, bookid)
     else:
         termclear()
+        print("Book not found. Please enter a valid Book_ID.\n")
         show_books_to_add(cursor, userid)
 
 #Update methods
